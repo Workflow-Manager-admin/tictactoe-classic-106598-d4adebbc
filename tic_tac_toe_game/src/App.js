@@ -1,6 +1,10 @@
 import React from 'react';
 import './App.css';
+import TicTacToeMain from './TicTacToeMain';
 
+/**
+ * App entry - hosts the TicTacToe Classic main container.
+ */
 function App() {
   return (
     <div className="app">
@@ -10,24 +14,16 @@ function App() {
             <div className="logo">
               <span className="logo-symbol">*</span> KAVIA AI
             </div>
-            <button className="btn">Template Button</button>
+            <button className="btn" tabIndex={-1} style={{ opacity: 0.35, pointerEvents: "none" }}>
+              Template Button
+            </button>
           </div>
         </div>
       </nav>
 
       <main>
-        <div className="container">
-          <div className="hero">
-            <div className="subtitle">AI Workflow Manager Template</div>
-            
-            <h1 className="title">tic_tac_toe_game</h1>
-            
-            <div className="description">
-              Start building your application.
-            </div>
-            
-            <button className="btn btn-large">Button</button>
-          </div>
+        <div className="container" style={{ display: "flex", flexDirection: "column", alignItems: "center", minHeight: "80vh" }}>
+          <TicTacToeMain />
         </div>
       </main>
     </div>
